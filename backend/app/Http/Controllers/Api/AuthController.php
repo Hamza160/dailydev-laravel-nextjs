@@ -11,34 +11,34 @@ use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
-    public function login(RegisterUserRequest $request)
+    public function login(Request $request)
     {
         $request->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
         try {
-            if (Auth::attempt($request->validated())) {
+            if (Auth::attempt($request->only('email', 'password'))) {
                 $user = auth()->user();
-                $user->createToken('access_token')->plainTextToken;
+                $user['token'] = $user->createToken('access_token')->plainTextToken;
 
                 return response()->json([
                     'success' => true,
                     'message' => 'Account created successfully',
                     'user' => $user,
-                ]);
+                ], 200);
             }else{
                 return response()->json([
                     'success' => false,
                     'message' => 'Invalid username or password',
-                ]);
+                ], 404);
             }
         } catch (\Exception $e) {
             Log::error("Login Error => " . $e->getMessage());
             return response()->json([
                 'success' => false,
                 'message' => "something went wrong",
-            ]);
+            ], 500);
         }
     }
 
@@ -50,13 +50,44 @@ class AuthController extends Controller
             return response()->json([
                 'success' => true,
                 'message' => 'Account created successfully',
-            ]);
+            ], 200);
         } catch (\Exception $e) {
             Log::error("Register Error => " . $e->getMessage());
             return response()->json([
                 'success' => false,
                 'message' => "something went wrong",
-            ]);
+            ], 500);
+        }
+    }
+
+    public function checkCredentials(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        try {
+            if (Auth::attempt($request->only('email', 'password'))) {
+                $user = auth()->user();
+
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Account created successfully',
+                    'user' => $user,
+                ], 200);
+            }else{
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Invalid username or password',
+                ], 400);
+            }
+        } catch (\Exception $e) {
+            Log::error("Login Error => " . $e->getMessage());
+            return response()->json([
+                'success' => false,
+                'message' => "something went wrong",
+            ], 500);
         }
     }
 }

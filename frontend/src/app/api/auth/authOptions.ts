@@ -20,7 +20,7 @@ export type CustomUser = {
     updated_at?: Date;
 }
 
-const authOptions: AuthOptions = {
+export const authOptions: AuthOptions = {
     pages:{
         signIn:'/login'
     },
@@ -38,7 +38,7 @@ const authOptions: AuthOptions = {
     },
     providers: [
         CredentialsProvider({
-            name: 'Credentials',
+            name: 'credentials',
             credentials: {
                 email: {},
                 password: {}

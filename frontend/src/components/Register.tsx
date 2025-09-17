@@ -4,7 +4,10 @@ import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {TabsContent} from "@/components/ui/tabs";
-import {useState} from "react";
+import React, {useState} from "react";
+import myAxios from "@/lib/axios.config";
+import {REGISTER_URL} from "@/lib/apiEndPoints";
+import {toast} from "react-toastify";
 
 const Register = () => {
     const [authState, setAuthState] = useState({
@@ -16,6 +19,32 @@ const Register = () => {
     });
     const [loading, setLoading] = useState(false);
 
+    const [errors, setErrors] = useState({
+        name:[],
+        username:[],
+        email:[],
+        password:[],
+    });
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setLoading(true);
+
+        try{
+            await myAxios.post(REGISTER_URL, authState)
+            setLoading(false);
+            toast.success("Account created successfully! we are logging you");
+        }catch(error){
+            setLoading(false);
+            console.log(error);
+            if(error?.response.status === 422){
+                setErrors(error.response.data.errors);
+            }else{
+                toast.error("Something went wrong. Please try again later");
+            }
+        }
+    }
+
     return (
         <TabsContent value="register">
             <Card>
@@ -26,7 +55,7 @@ const Register = () => {
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <form className="grid gap-6">
+                    <form className="grid gap-6" onSubmit={handleSubmit}>
                         <div className="grid gap-3">
                             <Label htmlFor="name">Full Name</Label>
                             <Input
@@ -36,6 +65,7 @@ const Register = () => {
                                 value={authState.name}
                                 onChange={(e) => setAuthState({...authState, name: e.target.value})}
                             />
+                            <span className="text-red-400">{errors.name?.[0]}</span>
                         </div>
                         <div className="grid gap-3">
                             <Label htmlFor="username">Username</Label>
@@ -46,6 +76,7 @@ const Register = () => {
                                 value={authState.username}
                                 onChange={(e) => setAuthState({...authState, username: e.target.value})}
                             />
+                            <span className="text-red-400">{errors.username?.[0]}</span>
                         </div>
                         <div className="grid gap-3">
                             <Label htmlFor="email">Email</Label>
@@ -56,6 +87,7 @@ const Register = () => {
                                 value={authState.email}
                                 onChange={(e) => setAuthState({...authState, email: e.target.value})}
                             />
+                            <span className="text-red-400">{errors.email?.[0]}</span>
                         </div>
                         <div className="grid gap-3">
                             <Label htmlFor="password">Password</Label>
@@ -65,6 +97,7 @@ const Register = () => {
                                 value={authState.password}
                                 onChange={(e) => setAuthState({...authState, password: e.target.value})}
                             />
+                            <span className="text-red-400">{errors.password?.[0]}</span>
                         </div>
                         <div className="grid gap-3">
                             <Label htmlFor="password_confirmation">Password Confirmation</Label>
