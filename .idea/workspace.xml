@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf877506-e383-4196-b699-b22d0dc985ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/Providers/AuthProvider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/Api/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/api/auth/authOptions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api/auth/authOptions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/apiEndPoints.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/lib/apiEndPoints.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +229,8 @@
       <workItem from="1758009659341" duration="6000" />
       <workItem from="1758036336548" duration="1835000" />
       <workItem from="1758046732599" duration="1808000" />
-      <workItem from="1758099123484" duration="4817000" />
+      <workItem from="1758099123484" duration="6313000" />
+      <workItem from="1758188894844" duration="558000" />
     </task>
     <servers />
   </component>

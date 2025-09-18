@@ -24,14 +24,14 @@ class AuthController extends Controller
 
                 return response()->json([
                     'success' => true,
-                    'message' => 'Account created successfully',
+                    'message' => 'Login successfully successfully',
                     'user' => $user,
                 ], 200);
             }else{
                 return response()->json([
                     'success' => false,
                     'message' => 'Invalid username or password',
-                ], 404);
+                ], 422);
             }
         } catch (\Exception $e) {
             Log::error("Login Error => " . $e->getMessage());
@@ -80,7 +80,7 @@ class AuthController extends Controller
                 return response()->json([
                     'success' => false,
                     'message' => 'Invalid username or password',
-                ], 400);
+                ], 422);
             }
         } catch (\Exception $e) {
             Log::error("Login Error => " . $e->getMessage());

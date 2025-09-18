@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import {ToastContainer} from "react-toastify";
-import AuthProvider from "@/Providers/AuthProvider";
+import AuthProvider from "@/app/providers/AuthProvider";
 
 const nunito = Nunito({subsets: ["latin"]});
 
@@ -25,9 +25,9 @@ export default function RootLayout({
         className={`${nunito.variable}  antialiased`}
       >
         <ToastContainer/>
-        <AuthProvider>
-            {children}
-        </AuthProvider>
+      <AuthProvider>
+          {children}
+      </AuthProvider>
       </body>
     </html>
   );
