@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf877506-e383-4196-b699-b22d0dc985ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/api/auth/authOptions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api/auth/authOptions.ts" afterDir="false" />
-    </list>
+    <list default="true" id="cf877506-e383-4196-b699-b22d0dc985ac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,6 +195,7 @@
       <recent name="$PROJECT_DIR$/frontend/src/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src" />
       <recent name="$PROJECT_DIR$/frontend/public" />
     </key>
   </component>
@@ -231,6 +229,7 @@
       <workItem from="1758046732599" duration="1808000" />
       <workItem from="1758099123484" duration="6313000" />
       <workItem from="1758188894844" duration="558000" />
+      <workItem from="1758201892015" duration="13244000" />
     </task>
     <servers />
   </component>

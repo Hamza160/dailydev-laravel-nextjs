@@ -12,7 +12,7 @@ export default function NotFound(){
                 height={500}
                 className="object-contain"
             />
-            <Link href="/">
+            <Link href="/frontend/public">
                 <Button>Back to Home</Button>
             </Link>
         </div>
