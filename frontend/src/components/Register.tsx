@@ -12,9 +12,9 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import axiosInstance from "@/lib/axios";
 import {REGISTER_URL} from "@/lib/apiEndpoints";
 import {useRouter} from "next/navigation";
+import {signIn} from "next-auth/react";
 
 const Register = () => {
-    const router = useRouter();
     const {register, handleSubmit, setError, formState: {errors, isSubmitting}} = useForm<RegisterSchemaType>({
         resolver: zodResolver(RegisterSchema)
     });
@@ -22,7 +22,12 @@ const Register = () => {
     const onSubmit = async (data: RegisterSchemaType): Promise<void> => {
         try {
             await axiosInstance.post(REGISTER_URL, data)
-            router.push("/login");
+            await signIn("credentials", {
+                email: data.email,
+                password: data.password,
+                redirect:true,
+                callbackUrl:'/'
+            })
             toast.success("Register successfully");
         } catch (error) {
             if (error?.response.status === 422) {

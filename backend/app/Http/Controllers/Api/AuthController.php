@@ -90,4 +90,22 @@ class AuthController extends Controller
             ], 500);
         }
     }
+
+    public function logout(Request $request)
+    {
+       try{
+           $request->user()->currentAccessToken()->delete();
+           return response()->json([
+               'success' => true,
+               'message' => 'Logout successfully',
+           ]);
+       }catch(\Exception $e){
+           Log::error("Logout Error => " . $e->getMessage());
+           return response()->json([
+               'success' => false,
+               'message' => "something went wrong",
+           ], 500);
+       }
+
+    }
 }

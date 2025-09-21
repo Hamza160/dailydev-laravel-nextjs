@@ -4,17 +4,18 @@ import axiosInstance from "@/lib/axios";
 import {LOGIN_URL} from "@/lib/apiEndpoints";
 import {JWT} from "next-auth/jwt";
 
-interface CustomSession{
+export interface CustomSession{
     user?:CustomSession;
     expires: ISODateString
 }
-interface CustomUser{
+export  interface CustomUser{
     id?:string;
     email?:string;
     name?:string;
     username?:string;
     password?:string;
     profile_image?:string;
+    token?:string;
     created_at?:string;
     updated_at?:string;
 }
@@ -24,6 +25,11 @@ export const authOptions: AuthOptions = {
     },
     callbacks:{
         async jwt({token, user, trigger, session}){
+            if(trigger === 'update' && session?.profile_image)
+            {
+                const user = token.user as CustomUser
+                user.profile_image = session?.profile_image
+            }
             if(user){
                 token.user = user;
             }

@@ -2,7 +2,7 @@ import SidebarLinks from "@/components/base/SidebarLinks";
 
 const Sidebar = () => {
     return (
-        <div className="w-[260px] border-r p-4">
+        <div className="hidden lg:block w-[260px] border-r p-4">
             <SidebarLinks/>
         </div>
     )

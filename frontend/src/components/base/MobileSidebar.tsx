@@ -7,10 +7,10 @@ import {MenuIcon} from "lucide-react";
 import SidebarLinks from "@/components/base/SidebarLinks";
 const MobileSidebar = () => {
     return (
-       <div className="p-4">
+       <div className="p-4 lg:hidden">
            <Sheet>
                <SheetTrigger asChild>
-                   <MenuIcon className="lg:hidden cursor-pointer"/>
+                   <MenuIcon className="cursor-pointer"/>
                </SheetTrigger>
                <SheetContent side="left">
                    <SidebarLinks />

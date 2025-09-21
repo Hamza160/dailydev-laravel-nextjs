@@ -1,12 +1,12 @@
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
 import {BellIcon} from "lucide-react";
-import UserAvatar from "@/components/common/UserAvatar";
 import SearchInput from "@/components/base/SearchInput";
 import ProfileMenu from "@/components/base/ProfileMenu";
 import MobileSidebar from "@/components/base/MobileSidebar";
+import {CustomUser} from "@/app/api/auth/[...nextauth]/authOptions";
 
-const Navbar = () => {
+const Navbar = ({user}:{user:CustomUser}) => {
     return (
         <nav className="flex justify-between items-center p-2 border-b">
             <MobileSidebar/>
