@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf877506-e383-4196-b699-b22d0dc985ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/middleware.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/Api/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/(daily_dev)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/(daily_dev)/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/api/auth/[...nextauth]/authOptions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api/auth/[...nextauth]/authOptions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/api/auth/[...nextauth]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/providers/AuthProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/providers/AuthProvider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/base/MobileSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/base/MobileSidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/base/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/base/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/base/ProfileMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/base/ProfileMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/base/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/base/Sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/common/UserAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/common/UserAvatar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/apiEndpoints.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/lib/apiEndpoints.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,12 +242,29 @@
       <workItem from="1758289937774" duration="3120000" />
       <workItem from="1758354758427" duration="4000" />
       <workItem from="1758358346788" duration="2905000" />
-      <workItem from="1758451363140" duration="4477000" />
+      <workItem from="1758451363140" duration="5234000" />
+      <workItem from="1758469795385" duration="37000" />
+      <workItem from="1758551828277" duration="146000" />
+      <workItem from="1758567614502" duration="21000" />
+      <workItem from="1758567654263" duration="7000" />
+      <workItem from="1758567882640" duration="9000" />
+      <workItem from="1758568555332" duration="186000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/frontend/src/components/base/SidebarLinks.tsx</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.apollographql.ijplugin.settings.ProjectSettingsState">
     <option name="hasEnabledGraphQLPluginApolloKotlinSupport" value="true" />

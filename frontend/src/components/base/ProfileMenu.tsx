@@ -15,78 +15,78 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog"
 import UserAvatar from "@/components/common/UserAvatar";
-import React, {useEffect} from "react";
-import {Button} from "@/components/ui/button";
+import React, { useEffect } from "react";
+import { Button } from "@/components/ui/button";
 import axiosInstance from "@/lib/axios";
-import {LOGOUT_URL, UPDATE_PROFILE_URL} from "@/lib/apiEndpoints";
-import {CustomSession, CustomUser} from "@/app/api/auth/[...nextauth]/authOptions";
-import {toast} from "react-toastify";
-import {signOut} from 'next-auth/react'
-import {Label} from "@radix-ui/react-menu";
-import {Input} from "@/components/ui/input";
-import {useSession} from "next-auth/react";
+import { LOGOUT_URL, UPDATE_PROFILE_URL } from "@/lib/apiEndpoints";
+import { CustomSession, CustomUser } from "@/app/api/auth/[...nextauth]/authOptions";
+import { toast } from "react-toastify";
+import { signOut } from 'next-auth/react'
+import { Label } from "@radix-ui/react-menu";
+import { Input } from "@/components/ui/input";
+import { useSession } from "next-auth/react";
 
 const ProfileMenu = () => {
-    const {data, update} = useSession();
+    const { data, update } = useSession();
     const user = data?.user as CustomUser;
     const [logoutOpen, setLogoutOpen] = React.useState(false);
     const [profileOpen, setProfileOpen] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
-    const [image, setImage] = React.useState<File|null>(null);
+    const [image, setImage] = React.useState<File | null>(null);
     const [errors, setErrors] = React.useState({
         profile_image: []
     });
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0]
-        if(file){
+        if (file) {
             setImage(file)
         }
     }
 
-    const updateProfile = async(event:React.FormEvent) => {
+    const updateProfile = async (event: React.FormEvent) => {
         event.preventDefault();
 
-        try{
+        try {
             setLoading(true);
             const formData = new FormData();
             formData.append('profile_image', image ?? "");
             const response = await axiosInstance.post(UPDATE_PROFILE_URL, formData, {
                 headers: {
-                    Authorization:`Bearer ${user.token}`,
+                    Authorization: `Bearer ${user.token}`,
                 }
             })
             console.log(response.data);
             const profile_image = response?.data?.profile_image;
 
-            await update({profile_image:profile_image})
+            await update({ profile_image: profile_image })
             toast.success("Profile successfully updated")
             setProfileOpen(false);
-        }catch(error){
-            if(error?.response?.status === 422){
+        } catch (error) {
+            if (error?.response?.status === 422) {
                 setErrors(error?.response?.data?.errors)
-            }else if(error?.response?.status === 401){
+            } else if (error?.response?.status === 401) {
                 toast.error("Invalid Credentials")
-            }else{
+            } else {
                 toast.error("Something went wrong. Please try again")
             }
-        }finally{
+        } finally {
             setLoading(false);
         }
     }
 
-    const logoutUser = async() => {
-        try{
+    const logoutUser = async () => {
+        try {
             await axiosInstance.post(LOGOUT_URL, {}, {
-                headers:{
-                    Authorization:`Bearer ${user.token}`
+                headers: {
+                    Authorization: `Bearer ${user.token}`
                 }
             })
             await signOut({
                 callbackUrl: '/login',
                 redirect: true
             })
-        }catch(error){
+        } catch (error) {
             toast.error(error?.response?.data?.message);
         }
     }
@@ -107,7 +107,7 @@ const ProfileMenu = () => {
                                 {errors?.profile_image?.length > 0 && <span className="text-red-400">{errors.profile_image?.[0]}</span>}
                             </div>
                             <div className="mb-2">
-                                <Button className="w-full" type="submit" disabled={loading}>{loading ? 'Processing': 'Update Profile'}</Button>
+                                <Button className="w-full" type="submit" disabled={loading}>{loading ? 'Processing' : 'Update Profile'}</Button>
                             </div>
                         </form>
                     </div>
@@ -137,7 +137,7 @@ const ProfileMenu = () => {
             </Dialog>
             <DropdownMenu>
                 <DropdownMenuTrigger>
-                    <UserAvatar image={user?.profile_image ?? undefined}/>
+                    <UserAvatar image={user?.profile_image ?? undefined} />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                     <DropdownMenuLabel>My Account</DropdownMenuLabel>

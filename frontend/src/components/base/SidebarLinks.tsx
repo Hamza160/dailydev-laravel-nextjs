@@ -4,6 +4,7 @@ import {ArrowBigUpIcon, FlameIcon, LinkIcon, SearchIcon} from "lucide-react";
 import UserAvatar from "@/components/common/UserAvatar";
 import {useSession} from "next-auth/react";
 import {CustomUser} from "@/app/api/auth/[...nextauth]/authOptions";
+import AddPost from "@/components/post/AddPost";
 
 const SidebarLinks = () => {
     const {data} = useSession();
@@ -36,10 +37,7 @@ const SidebarLinks = () => {
             <p className="my-2 font-bold text-white/80">Contribute</p>
             <ul>
                 <li>
-                    <Link href="/popular" className="flex space-x-4 items-center mb-4">
-                        <LinkIcon className="w-5 h-5"/>
-                        <p>Submit Article</p>
-                    </Link>
+                    <AddPost/>
                 </li>
             </ul>
         </>

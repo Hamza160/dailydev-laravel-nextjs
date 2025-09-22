@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProfileController;
@@ -16,4 +17,5 @@ Route::post('/auth/check-credentials', [AuthController::class, 'checkCredentials
 Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::post('/auth/logout', [AuthController::class, 'logout']);
     Route::post('/update/profile', [ProfileController::class, 'updateImage']);
+    Route::apiResource('/post', PostController::class);
 });

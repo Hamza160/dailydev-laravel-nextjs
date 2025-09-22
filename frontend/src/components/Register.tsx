@@ -13,7 +13,6 @@ import axiosInstance from "@/lib/axios";
 import {REGISTER_URL} from "@/lib/apiEndpoints";
 import {useRouter} from "next/navigation";
 import {signIn} from "next-auth/react";
-
 const Register = () => {
     const {register, handleSubmit, setError, formState: {errors, isSubmitting}} = useForm<RegisterSchemaType>({
         resolver: zodResolver(RegisterSchema)
