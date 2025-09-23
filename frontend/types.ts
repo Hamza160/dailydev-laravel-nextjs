@@ -14,3 +14,10 @@ type ImagePreviewResType = {
     videos: {};
     favicons: string[];
 }
+
+type PostStateType = {
+    title: string;
+    url: string;
+    image_url:string;
+    description?: string;
+}

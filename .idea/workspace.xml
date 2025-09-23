@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cf877506-e383-4196-b699-b22d0dc985ac" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/api/auth/[...nextauth]/authOptions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api/auth/[...nextauth]/authOptions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/api/auth/[...nextauth]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/providers/AuthProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/providers/AuthProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/base/ProfileMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/base/ProfileMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/post/AddPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/post/AddPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/lib/apiEndpoints.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/lib/apiEndpoints.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/lib/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,6 +248,11 @@
       <workItem from="1758567654263" duration="7000" />
       <workItem from="1758567882640" duration="9000" />
       <workItem from="1758568555332" duration="186000" />
+      <workItem from="1758575809324" duration="4085000" />
+      <workItem from="1758641321149" duration="1748000" />
+      <workItem from="1758655987545" duration="846000" />
+      <workItem from="1758656885655" duration="81000" />
+      <workItem from="1758656980020" duration="54000" />
     </task>
     <servers />
   </component>
@@ -260,7 +264,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/frontend/src/components/base/SidebarLinks.tsx</url>
-          <line>12</line>
+          <line>13</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
