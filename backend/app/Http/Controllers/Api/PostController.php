@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::query()->latest()->paginate(20);
+        $posts = Post::query()->with('user')->latest()->paginate(20);
         return response()->json($posts);
     }
 
