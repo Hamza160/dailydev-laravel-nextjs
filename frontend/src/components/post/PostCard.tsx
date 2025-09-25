@@ -11,7 +11,7 @@ import {ArrowBigUp, LinkIcon, MessageSquare} from "lucide-react";
 import {formatDate} from "@/lib/utils";
 const PostCard = ({post}: { post:PostType }) => {
     return (
-        <Card className="w-[300px] h-[500px] bg-muted">
+        <Card className="w-full md:w-[300px] md:h-[500px] bg-muted">
             <CardHeader>
                 <UserAvatar image={post.user.profile_image} />
                 <CardTitle className="text-2xl font-bold">{post.title}</CardTitle>

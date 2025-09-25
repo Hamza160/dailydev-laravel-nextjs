@@ -1,7 +1,9 @@
 <?php
 
+use App\Events\TestEvent;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\PostController;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProfileController;
@@ -18,4 +20,12 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::post('/auth/logout', [AuthController::class, 'logout']);
     Route::post('/update/profile', [ProfileController::class, 'updateImage']);
     Route::apiResource('/post', PostController::class);
+});
+
+Route::post("/test/channel", function (Request $request) {
+    $post = Post::with('user')->first();
+
+    TestEvent::dispatch($post);
+
+    return response()->json(['message' => 'Data Send to Client']);
 });

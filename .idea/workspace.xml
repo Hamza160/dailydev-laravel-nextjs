@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf877506-e383-4196-b699-b22d0dc985ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/post/PostCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/post/Posts.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/dataFetch/postFetch.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/Api/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/Api/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/(daily_dev)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/(daily_dev)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/types.ts" afterDir="false" />
-    </list>
+    <list default="true" id="cf877506-e383-4196-b699-b22d0dc985ac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -260,7 +248,7 @@
       <workItem from="1758656885655" duration="81000" />
       <workItem from="1758656980020" duration="54000" />
       <workItem from="1758657053189" duration="970000" />
-      <workItem from="1758698552176" duration="2817000" />
+      <workItem from="1758698552176" duration="3001000" />
     </task>
     <servers />
   </component>
