@@ -29,3 +29,6 @@ Route::post("/test/channel", function (Request $request) {
 
     return response()->json(['message' => 'Data Send to Client']);
 });
+
+
+Broadcast::routes(["middleware" => ["auth:sanctum"]]);

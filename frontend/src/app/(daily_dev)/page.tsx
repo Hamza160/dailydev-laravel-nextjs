@@ -12,7 +12,7 @@ export default async function Home() {
 
     return (
         <div>
-            <Posts data={posts} />
+            <Posts data={posts}/>
         </div>
     );
 }

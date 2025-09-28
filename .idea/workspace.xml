@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf877506-e383-4196-b699-b22d0dc985ac" name="Changes" comment="" />
+    <list default="true" id="cf877506-e383-4196-b699-b22d0dc985ac" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/Events/TestEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Events/TestEvent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/channels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/(daily_dev)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/(daily_dev)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/post/Posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/post/Posts.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,6 +169,21 @@
       <path value="$PROJECT_DIR$/backend/vendor/graham-campbell/result-type" />
       <path value="$PROJECT_DIR$/backend/vendor/_laravel_idea" />
       <path value="$PROJECT_DIR$/backend/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/backend/vendor/phiki/phiki" />
+      <path value="$PROJECT_DIR$/backend/vendor/evenement/evenement" />
+      <path value="$PROJECT_DIR$/backend/vendor/laravel/reverb" />
+      <path value="$PROJECT_DIR$/backend/vendor/clue/redis-protocol" />
+      <path value="$PROJECT_DIR$/backend/vendor/clue/redis-react" />
+      <path value="$PROJECT_DIR$/backend/vendor/ratchet/rfc6455" />
+      <path value="$PROJECT_DIR$/backend/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/backend/vendor/pusher/pusher-php-server" />
+      <path value="$PROJECT_DIR$/backend/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/backend/vendor/react/dns" />
+      <path value="$PROJECT_DIR$/backend/vendor/react/socket" />
+      <path value="$PROJECT_DIR$/backend/vendor/react/event-loop" />
+      <path value="$PROJECT_DIR$/backend/vendor/react/cache" />
+      <path value="$PROJECT_DIR$/backend/vendor/react/stream" />
+      <path value="$PROJECT_DIR$/backend/vendor/react/promise-timer" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -201,7 +225,11 @@
       <recent name="$PROJECT_DIR$/frontend/public" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Pest.Main">
+    <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner configuration_file="$PROJECT_DIR$/backend/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
     <configuration name="Main" type="PestRunConfigurationType">
       <PestRunner configuration_file="$PROJECT_DIR$/backend/phpunit.xml" scope="ConfigurationFile" use_alternative_configuration_file="true" />
       <method v="2" />
@@ -249,6 +277,10 @@
       <workItem from="1758656980020" duration="54000" />
       <workItem from="1758657053189" duration="970000" />
       <workItem from="1758698552176" duration="3001000" />
+      <workItem from="1758786899132" duration="3576000" />
+      <workItem from="1758871001799" duration="1018000" />
+      <workItem from="1758957747097" duration="62000" />
+      <workItem from="1759051982112" duration="1061000" />
     </task>
     <servers />
   </component>
@@ -262,6 +294,11 @@
           <url>file://$PROJECT_DIR$/frontend/src/components/base/SidebarLinks.tsx</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/backend/routes/api.php</url>
+          <line>5</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
